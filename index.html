@@ -1,8 +1,3 @@
-echo "----------------Process Start------------------"
-
-myip=`curl http://169.254.169.254/latest/meta-data/local-ipv4`
-
-cat << EOF > index.html
 <HTML>
 <HEAD>
 <TITLE>VENOM</TITLE>
@@ -27,8 +22,6 @@ setTimeout('Elastic()',100)
 <br><br><br><br>
 <font color="green"><h2>This WebServer Genereted by</h2>
 <font color="blue"><H1 ID "elastic" ALIGN="Center">Jenkins</H1>
-<h2>Index file deployed from IP: $myip</h2><br>Build by JENKINS usinng External Script!"
+<h2>Index file deployed from GitHub</h2><br>Build by JENKINS usinng External Script!"
 </body>
 </HTML>
-EOF
-echo "----------------Process Finished------------------------"
